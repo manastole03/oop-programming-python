@@ -1,0 +1,33 @@
+class Matrix:
+    def __init__(self, row, col):
+        if type(row) != int:
+            raise TypeError
+        if type(col) != int:
+            raise TypeError
+        if row < 1 or col < 1:
+            raise ValueError("Bad value for r/c")
+        self.r = row
+        self.c = col
+
+        self.M = []
+        for i in range(self.r):
+            C = []
+            for j in range(self.c):
+                C.append(0.0)
+            self.M.append(C)
+
+        #self.M = [[0.0 for j in range(col)]
+        #           for i in range(row)]
+
+        
+
+
+
+def main():
+    M1 = Matrix(10, 5)
+    M2 = Matrix(3, 3)
+    M3 = Matrix(20, 15)
+    print(M1.r, M1.c)
+
+main()
+
